@@ -45,16 +45,16 @@ function App() {
     items.push(
       <div key = {index} className='starwars-container'>
           <h3 className='text-left'>{res['name']} {throphy===res['films'].length?<FontAwesomeIcon icon={faTrophy} size={"2x"}/>:""}</h3>
-          <table className='table-data'>
-            <tbody>
-              <tr>
-                <td>Model</td><td>Number of films</td>
-              </tr>
-              <tr>
-                <td>{res['model']}</td><td>{res['films'].length}</td>
-              </tr>
-            </tbody>
-          </table>
+          <div className='row col-12 table-data'>
+            <div className="col-md-6 col-sm-12">
+              <p>Model</p>
+              <p>{res['model']}</p>
+            </div>
+            <div className="col-md-6 col-sm-12">
+              <p>Number of films</p>
+              <p>{res['films'].length}</p>
+            </div>
+          </div>
       </div>
     );
   })
